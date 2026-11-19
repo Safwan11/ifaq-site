@@ -31,7 +31,7 @@
         <p class="intro-ar" dir="rtl">رفيقك لبناء روتين عبادة أكثر ثباتًا ومعنى.</p>
         <a class="download-button" href="download/IFAQ.apk" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v13m0 0 5-5m-5 5-5-5M4 17v4h16v-4"/></svg>Download IFAQ (APK)</a>
         <p class="platform-note"><span class="android-icon">●</span> Android only <b>·</b> Early Beta Version</p>
-        <p class="version-note">Latest build: v2.3.0 · 96 MB · updated 2026-11-19</p>
+        <p class="version-note" id="version-note">Latest build: v2.3.0 · 96 MB · updated 2026-11-19</p>
       </div>
 
       <div class="steps" aria-label="How to try IFAQ">
@@ -75,5 +75,14 @@
     </section>
   </main>
   <footer><span>IFAQ · Early Access</span><span><a href="mailto:muslimtecheg@gmail.com">Contact support</a><a href="privacy.html">Privacy Policy</a><a href="privacy.html#ar">سياسة الخصوصية</a></span><span>Android beta</span></footer>
+  <script>
+    // the version line follows the newest build automatically
+    fetch('download/version.json', { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (v) {
+        if (v && v.version) document.getElementById('version-note').textContent = 'Latest build: v' + v.version + ' · ' + v.sizeMB + ' MB · updated ' + v.date;
+      })
+      .catch(function () {});
+  </script>
 </body>
 </html>
