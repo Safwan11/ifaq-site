@@ -1,66 +1,79 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>إفاق IFAQ — رفيقك اليومي للعبادة</title>
-  <meta name="description" content="إفاق تطبيق يساعدك على تقييم عاداتك في العبادة، وبناء روتين مستدام، ومتابعة صلاتك وقرآنك وأذكارك وأهدافك — بالعربية والإنجليزية." />
-  <link rel="icon" href="favicon.png" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04101e">
+  <meta name="description" content="Try IFAQ early. Download the Android beta and help us make it better.">
+  <title>IFAQ — Early Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.png">
+  <meta property="og:title" content="IFAQ — إفاق">
+  <meta property="og:description" content="A personal companion for a more consistent and meaningful worship routine.">
+  <meta property="og:image" content="https://ifaq.app/icon.png">
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="./"><img src="icon.png" alt="" /><span>IFAQ</span></a>
-      <div class="links">
-        <a href="#features">المميزات</a>
-        <a href="#en" class="en">English</a>
-        <a href="privacy.html">سياسة الخصوصية</a>
-      </div>
-    </nav>
+  <header class="topbar" id="home">
+    <a class="brand" href="#home" aria-label="IFAQ home"><svg class="brand-art" viewBox="0 0 352 176" aria-hidden="true"><defs><filter id="wordmark-cutout" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 2.3 0 0 -0.22"/></filter></defs><image href="/assets/ifaq-wordmark-source.png" width="352" height="176" filter="url(#wordmark-cutout)"/></svg></a>
+    <nav aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#about">About (Beta)</a><a href="#feedback">Share Feedback</a><a href="/privacy.html">Privacy</a></nav>
+    <a class="nav-download" href="/download/IFAQ.apk" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 17v4h16v-4"/></svg>Download APK</a>
+  </header>
 
-    <section class="hero">
-      <div class="crescent" aria-hidden="true"></div>
-      <p class="latin">IFAQ</p>
-      <p class="arabic">إفاق</p>
-      <p class="lead">رحلتك نحو حياة أقرب إلى الله تبدأ بخطوة.</p>
-      <p class="sub">تطبيق يساعدك على فهم عاداتك الحالية في العبادة، وبناء روتين مستدام، ومتابعة تقدّمك يومًا بعد يوم — بهدوء ومن غير أحكام.</p>
-      <div class="btns">
-        <a class="btn primary" href="download/IFAQ.apk">تحميل التطبيق</a>
-        <a class="btn secondary" href="privacy.html">سياسة الخصوصية</a>
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-copy">
+        <p class="eyebrow">EARLY ACCESS (BETA)</p>
+        <h1>Be Among the First<br>to Try <span>IFAQ</span></h1>
+        <p class="intro">A personal companion to help you build a more consistent and meaningful worship routine.</p>
+        <p class="intro-ar" dir="rtl">رفيقك لبناء روتين عبادة أكثر ثباتًا ومعنى.</p>
+        <a class="download-button" href="/download/IFAQ.apk" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v13m0 0 5-5m-5 5-5-5M4 17v4h16v-4"/></svg>Download IFAQ (APK)</a>
+        <p class="platform-note"><span class="android-icon">●</span> Android only <b>·</b> Early Beta Version</p>
+        <p class="version-note">Latest build: v2.2.2 · 94 MB · updated 2026-11-19</p>
+      </div>
+
+      <div class="steps" aria-label="How to try IFAQ">
+        <article class="step"><span class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 17v4h16v-4"/></svg></span><div><h2>1. Download the APK</h2><p>Install the app on your Android device.</p></div></article>
+        <article class="step"><span class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg></span><div><h2>2. Use &amp; Explore</h2><p>Try the app and experience the journey.</p></div></article>
+        <article class="step"><span class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span><div><h2>3. Share Your Feedback</h2><p>Tell us what you think, what to improve, and any issues you face.</p></div></article>
+      </div>
+
+      <div class="scene" aria-hidden="true">
+        <div class="window-glow"></div>
+        <svg class="window-scene" viewBox="0 0 480 700" preserveAspectRatio="xMidYMin meet">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#071b32"/><stop offset=".55" stop-color="#182f48"/><stop offset="1" stop-color="#de7840"/></linearGradient>
+            <linearGradient id="arch" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9b553"/><stop offset=".25" stop-color="#623619"/><stop offset=".55" stop-color="#ed963c"/><stop offset="1" stop-color="#382113"/></linearGradient>
+            <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#152033"/><stop offset="1" stop-color="#080e19"/></linearGradient>
+            <clipPath id="view"><path d="M92 570V212a148 148 0 0 1 296 0v358Z"/></clipPath>
+            <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+          </defs>
+          <g clip-path="url(#view)"><path fill="url(#sky)" d="M80 58h320v520H80z"/><circle cx="314" cy="226" r="89" fill="#ed9b4c" opacity=".14" filter="url(#soft)"/><path d="M316 156a54 54 0 1 0 49 82 48 48 0 0 1-49-82Z" fill="#ffdb8b"/><path d="M90 400q75-61 143-24t143-15v150H90Z" fill="#26374b" opacity=".75"/><path d="M82 470h320v115H82Z" fill="#0c1522"/>
+            <g fill="#07101c"><path d="M97 491h35v-81l17-31 17 31v81h29v-53l8-22 8 22v53h26v-73l13-23 13 23v73h26v-113l14-41 14 41v113h29v-76l13-24 13 24v76h38v90H97Z"/><path d="M275 468V354l7-38 8 38v114Zm-4-135h20l-10-21Z"/><path d="M138 411v-36l11-24 12 24v36Zm-3-56h28l-14-20Z"/><path d="M352 470v-39l13-25 13 25v39Zm-4-61h34l-17-21Z"/></g>
+            <g fill="#e99b49" opacity=".9"><path d="M113 465h4v7h-4zm17 8h4v7h-4zm44-27h4v7h-4zm58 29h4v7h-4zm44-7h4v7h-4zm49-36h4v7h-4zm45 36h4v7h-4zm20-20h4v7h-4z"/></g>
+            <path d="M80 571h320v150H80Z" fill="url(#floor)"/><path d="M90 582h300M114 609h250M135 637h206M159 665h166" stroke="#9b6135" stroke-opacity=".32"/>
+          </g>
+          <path fill="none" stroke="url(#arch)" stroke-width="13" d="M74 580V211a166 166 0 0 1 332 0v369"/><path fill="none" stroke="#edaa56" stroke-opacity=".42" stroke-width="2" d="M89 570V212a151 151 0 0 1 302 0v358"/><path d="M65 580h350v13H65z" fill="#a96930"/><path d="M80 593h320v8H80z" fill="#f0a94e" opacity=".52"/>
+        </svg>
+        <div class="lantern"><span></span><i></i></div>
+        <div class="book"><span></span></div>
+      </div>
+
+      <div class="features">
+        <article><span class="feature-icon"><svg viewBox="0 0 48 44" aria-hidden="true"><path d="M24 41V25"/><path d="M24 26C14 25 8 18 8 8c10 0 17 7 18 17"/><path d="M25 24C25 13 32 6 42 5c1 10-6 18-17 21"/><path d="M11 12c5 5 9 9 13 14"/><path d="M38 9c-4 5-8 10-13 15"/></svg></span><h2>Build Consistency</h2><p>Turn your intentions into<br>daily action.</p></article>
+        <article><span class="feature-icon"><svg viewBox="0 0 48 42" aria-hidden="true"><path d="M24 1 46 11 24 22 2 11 24 1Z"/><path d="m3 17 21 10 21-10v6L24 34 3 23v-6Z"/><path d="m3 27 21 10 21-10v5L24 42 3 32v-5Z"/></svg></span><h2>Grow Gradually</h2><p>Small, realistic steps<br>that fit your life.</p></article>
+        <article><span class="feature-icon">✦</span><h2>A More Meaningful Routine</h2><p>Focus on what truly matters.</p></article>
       </div>
     </section>
 
-    <h2 id="features">ماذا يقدّم إفاق؟</h2>
-    <div class="grid">
-      <div class="card"><div class="ic">🪞</div><h3>تقييم ذاتي للعبادات</h3><p>٨ فئات: الصلاة، القرآن، الأذكار، الصيام، الصدقة، العلم، الأخلاق، وعبادات إضافية.</p></div>
-      <div class="card"><div class="ic">🕌</div><h3>مواقيت الصلاة والقبلة</h3><p>حساب دقيق حسب موقعك وطريقة الحساب التي تختارها، مع بوصلة القبلة وتنبيهات الأذان.</p></div>
-      <div class="card"><div class="ic">✅</div><h3>متابعة يومية</h3><p>الفرائض والسنن والقرآن والأذكار والصدقة، مع عبادات خاصة تضيفها بنفسك.</p></div>
-      <div class="card"><div class="ic">🎯</div><h3>أهداف واقعية</h3><p>أهداف يومية وأسبوعية وشهرية بتذكيرات لطيفة، تبدأ صغيرة وتدوم.</p></div>
-      <div class="card"><div class="ic">📖</div><h3>القرآن الكريم</h3><p>المصحف كاملًا بالرسم العثماني، مع العلامات وسجل القراءة ومتابعة الحفظ والمراجعة.</p></div>
-      <div class="card"><div class="ic">📚</div><h3>مكتبة موثّقة</h3><p>أذكار وأدعية وأحاديث، كل نص بمصدره ودرجته.</p></div>
-    </div>
-
-    <div class="note">إفاق أداة لبناء العادات والتأمل الذاتي. لا يقيس التطبيق إيمان أحد ولا قبول أعماله؛ فذلك علمه عند الله وحده.</div>
-
-    <hr />
-
-    <section id="en" class="en" dir="ltr" lang="en">
-      <h2>IFAQ — your daily companion for worship and growth</h2>
-      <p>IFAQ helps you reflect on your current worship habits, build a sustainable routine, and track your prayers, Quran reading, adhkar, fasting, charity and personal goals — in Arabic and English, gently and without judgment.</p>
-      <div class="grid">
-        <div class="card"><h3>Worship self-assessment</h3><p>Eight categories with an overview of strengths and next steps — never a "faith score".</p></div>
-        <div class="card"><h3>Prayer times &amp; Qibla</h3><p>Accurate calculation for your location and preferred method, with prayer alerts.</p></div>
-        <div class="card"><h3>Daily tracker &amp; goals</h3><p>Obligatory and voluntary worship, custom activities and realistic goals with reminders.</p></div>
-        <div class="card"><h3>Quran &amp; library</h3><p>The full Quran in Uthmani script, bookmarks, memorization tracking, and sourced adhkar and hadith.</p></div>
-      </div>
-      <p style="margin-top:22px"><a href="privacy.html#en">Privacy Policy</a></p>
+    <section class="feedback" id="feedback">
+      <div class="mail-icon"><svg viewBox="0 0 48 40" aria-hidden="true"><rect x="2" y="3" width="44" height="34" rx="3"/><path d="m4 6 20 16L44 6"/></svg></div>
+      <div class="feedback-copy"><h2>We’d Love to <span>Hear from You</span></h2><p>Your feedback helps us improve the app before the official release.</p></div>
+      <div class="feedback-action"><a href="mailto:support@ifaq.app?subject=IFAQ%20beta%20feedback&body=Hi%20IFAQ%20team%2C%0A%0AI%20tried%20the%20beta%20and%20wanted%20to%20share%3A%0A%0AAdd%3A%0ARemove%3A%0AAdjust%3A%0A%0ADevice%20(optional)%3A%0A"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>support@ifaq.app</span><b aria-hidden="true">▢</b></a></div>
     </section>
-
-    <footer>
-      © 2026 IFAQ · Muslim Tech
-      <br /><a href="privacy.html">سياسة الخصوصية</a> · <a href="privacy.html#en" class="en">Privacy Policy</a>
-    </footer>
-  </div>
+  </main>
+  <footer><span>IFAQ · Early Access</span><span><a href="mailto:support@ifaq.app">Contact support</a><a href="/privacy.html">Privacy Policy</a><a href="/privacy.html#ar">سياسة الخصوصية</a></span><span>Android beta</span></footer>
 </body>
 </html>

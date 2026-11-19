@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04101e">
+  <meta name="description" content="Try IFAQ early. Download the Android beta and help us make it better.">
+  <title>Join a challenge — IFAQ إفاق</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.png">
+  <meta property="og:title" content="IFAQ — إفاق">
+  <meta property="og:description" content="A personal companion for a more consistent and meaningful worship routine.">
+  <meta property="og:image" content="https://ifaq.app/icon.png">
+</head>
+<body>
+  <header class="topbar" id="home">
+    <a class="brand" href="/" aria-label="IFAQ home"><svg class="brand-art" viewBox="0 0 352 176" aria-hidden="true"><defs><filter id="wordmark-cutout" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 2.3 0 0 -0.22"/></filter></defs><image href="/assets/ifaq-wordmark-source.png" width="352" height="176" filter="url(#wordmark-cutout)"/></svg></a>
+    <nav aria-label="Main navigation"><a href="/">Home</a><a href="/#about">About (Beta)</a><a href="/#feedback">Share Feedback</a><a href="/privacy.html">Privacy</a></nav>
+    <a class="nav-download" href="/download/IFAQ.apk" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 17v4h16v-4"/></svg>Download APK</a>
+  </header>
+  <main>
+    <section class="page" style="text-align:center">
+      <h1>Join a challenge on <span>IFAQ</span></h1>
+      <p class="intro-ar" dir="rtl" style="margin-top:8px">انضم إلى تحدٍّ على تطبيق إفاق</p>
+      <div id="codeWrap" hidden>
+        <p class="muted">Join code · رمز الانضمام</p>
+        <div class="code-box" id="code">——</div>
+      </div>
+      <div class="actions">
+        <a class="download-button" id="openApp" href="ifaq://join"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>Open in the app · افتح في التطبيق</a>
+        <a class="ghost-button" href="/download/IFAQ.apk" download>Download IFAQ (APK) · حمّل التطبيق</a>
+      </div>
+      <p class="muted">Already have IFAQ? Tap “Open in the app”. New here? Download it, open <b>Challenges</b>, tap <b>Join with a code</b> and enter the code above.</p>
+      <p class="muted" dir="rtl">عندك التطبيق؟ اضغط «افتح في التطبيق». أول مرة؟ حمّل التطبيق، افتح <b>التحديات</b>، اضغط <b>انضم برمز</b> واكتب الرمز.</p>
+    </section>
+    <script>
+      (function () {
+        var q = new URLSearchParams(location.search);
+        var code = (q.get('c') || q.get('code') || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase().slice(0, 12);
+        var id = (q.get('id') || '').replace(/[^A-Za-z0-9-]/g, '').slice(0, 64);
+        var open = document.getElementById('openApp');
+        if (code) {
+          document.getElementById('codeWrap').hidden = false;
+          document.getElementById('code').textContent = code;
+          open.href = 'ifaq://join?c=' + code;
+        } else if (id) {
+          open.href = 'ifaq://join?id=' + id;
+        }
+      })();
+    </script>
+  </main>
+  <footer><span>IFAQ · Early Access</span><span><a href="mailto:support@ifaq.app">Contact support</a><a href="/privacy.html">Privacy Policy</a><a href="/privacy.html#ar">سياسة الخصوصية</a></span><span>Android beta</span></footer>
+</body>
+</html>
