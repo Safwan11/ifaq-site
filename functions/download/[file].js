@@ -1,7 +1,5 @@
-// /download/IFAQ.apk and /download/version.json always serve the newest app build.
-// Every CI build of the app uploads both to the "app-latest" release of this (public) repo;
-// until the first automated upload exists, the copy committed in download/ is used.
-const RELEASE = 'https://github.com/Safwan11/ifaq-site/releases/download/app-latest/';
+// /download/IFAQ.apk and /download/version.json serve the copies committed in download/
+// (updated by hand when a new version is deployed). Cloudflare Pages caps static files at 25 MB.
 const FALLBACK = 'https://raw.githubusercontent.com/Safwan11/ifaq-site/main/download/';
 const TYPES = {
   'IFAQ.apk': 'application/vnd.android.package-archive',
@@ -9,7 +7,7 @@ const TYPES = {
 };
 
 async function fetchFirst(name, method) {
-  for (const base of [RELEASE, FALLBACK]) {
+  for (const base of [FALLBACK]) {
     const r = await fetch(base + name, { method, redirect: 'follow', cf: { cacheEverything: true, cacheTtl: name === 'IFAQ.apk' ? 300 : 60 } });
     if (r.ok) return r;
   }
